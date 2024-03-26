@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".PlayersNameView"
+    android:id="@+id/mainLayout">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F57ED"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="235dp"
+        android:layout_marginTop="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:padding="12dp"
+            android:background="#0A1B78"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <TextView
+                android:id="@+id/pl_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/ply_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="176dp"
+                android:layout_marginTop="8dp"
+                android:text="Test Player"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/pl_id"
+                app:layout_constraintTop_toTopOf="@+id/pl_id" />
+
+            <TextView
+                android:id="@+id/ply_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="0dp"
+                app:layout_constraintStart_toStartOf="@+id/ply_name"
+                app:layout_constraintTop_toBottomOf="@+id/ply_name" />
+
+            <TextView
+                android:id="@+id/ply_runs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000"
+                app:layout_constraintStart_toStartOf="@+id/ply_match"
+                app:layout_constraintTop_toBottomOf="@+id/ply_match"
+                android:textSize="0dp"/>
+
+            <TextView
+                android:id="@+id/ply_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                app:layout_constraintStart_toStartOf="@+id/ply_runs"
+                app:layout_constraintTop_toBottomOf="@+id/ply_runs"
+                android:textSize="0dp"/>
+
+            <TextView
+                android:id="@+id/ply_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                app:layout_constraintStart_toStartOf="@+id/ply_50"
+                app:layout_constraintTop_toBottomOf="@+id/ply_50"
+                android:textSize="0dp"/>
+
+            <TextView
+                android:id="@+id/ply_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="48dp"
+                android:text="000.00"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="0dp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="248dp"
+                android:layout_marginBottom="8dp"
+                android:text="Score Rate"
+                android:textSize="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/ply_rate"
+                app:layout_constraintStart_toEndOf="@+id/pl_id" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
